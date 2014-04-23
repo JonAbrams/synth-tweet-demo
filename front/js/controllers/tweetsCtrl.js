@@ -3,6 +3,7 @@ angular.module('tweetDemo')
 
   if (preloadedData) {
     $scope.tweets = preloadedData.tweets;
+    preloadedData = null;
   } else {
     $http.get('/api/tweets').then(function (res) {
       $scope.tweets = res.data.tweets;
