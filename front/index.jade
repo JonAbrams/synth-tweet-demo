@@ -17,7 +17,7 @@ html(ng-app="tweetDemo")
   body
     h1 Tweets
 
-    div(ng-view)
+    div.main(ng-view)
 
     if preloadHTML
       script(type="text/ng-template" id="#{preloadHTMLPath}")
