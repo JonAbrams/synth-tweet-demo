@@ -8,3 +8,11 @@ exports.getIndex = function (req, res) {
       return { tweets: data };
     });
 };
+
+exports.post = function (req, res) {
+  return req.db.collection('tweets')
+    .insert({
+      content: req.body.tweet,
+      created_at: new Date()
+    });
+};

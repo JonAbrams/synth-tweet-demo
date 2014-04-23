@@ -10,4 +10,11 @@ angular.module('tweetDemo')
     });
   }
 
+  $scope.publish = function () {
+    $http.post('/api/tweets', { tweet: $scope.newTweet }).then(function (res) {
+      $scope.tweets.unshift(res.data);
+    });
+    $scope.newTweet = "";
+  };
+
 });
