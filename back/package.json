@@ -1,0 +1,9 @@
+{
+  "name": "tweetdemo",
+  "version": "0.0.1",
+  "dependencies": {
+    "promised-mongo": "^0.11.1",
+    "synth": "~0.4.7"
+  },
+  "devDependencies": {}
+}

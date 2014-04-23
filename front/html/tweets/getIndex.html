@@ -1,0 +1,10 @@
+<ul class="tweet-timeline">
+  <li ng-repeat="tweet in tweets" class="tweet">
+    <div class="content">
+      {{ tweet.content }}
+    </div>
+    <div class="date">
+      {{ tweet.created_at | date:'medium' }}
+    </div>
+  </li>
+</ul>
