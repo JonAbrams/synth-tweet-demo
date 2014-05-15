@@ -15,6 +15,13 @@ angular.module('tweetDemo', ['ngRoute'])
       data: dataLoaderRunner
     }
   })
+  .when('/tweets/:id', {
+    templateUrl: '/html/tweets/get.html',
+    controller: 'tweetController',
+    resolve: {
+      data: dataLoaderRunner
+    }
+  })
   .otherwise({
     redirectTo: '/tweets'
   });
